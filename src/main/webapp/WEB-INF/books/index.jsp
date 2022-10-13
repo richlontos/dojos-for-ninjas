@@ -18,45 +18,35 @@
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <title>Dojos For Ninjas!</title>
 </head>
 <body>
-<div class="container">
-<h1  class="align-content-center">Hello, ${user.userName} Here are some name suggestions...</h1>
-    <div class="row">
-        <h2>Baby names</h2>
-        <div class="float-end">
-        <a class="float-end btn-sm btn-primary" href="/books/new">New name</a>
-        <a class="float-end btn-sm btn-danger" href="/logout">Logout</a>
-        </div>
-        <table class="table table-bordered">
-            <thead>
-            <tr>
-                <th>Id</th>
-                <th>Name</th>
-                <th>Gender</th>
-                <th>Origin</th>
-
-            </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="book" items="${books}">
-                    <tr>
-                        <td><c:out value="${book.id}"></c:out></td>
-                        <td>
-                            <a href="/books/${book.id}">
-                            <c:out value="${book.title}"></c:out></a>
-                        </td>
-                        <td><c:out value="${book.author}"></c:out></td>
-                        <td><c:out value="${book.user.getUserName()}"></c:out></td>
-
-                    </tr>
-                </c:forEach>
-            </tbody>
-
-        </table>
-
-    </div>
-</div>
+<!-- Start Navigation Bar -->
+<nav class="navbar">
+    <ul class="menu">
+        <li>
+            <a href="#">Rentals</a>
+        </li>
+        <li>
+            <a href="#">Postings</a>
+        </li>
+        <li>
+            <a href="#">Find a roommate!</a>
+        </li>
+        <li>
+            <a href="#">Chat Room</a>
+        </li>
+        <li>
+            <a href="#">My profile</a>
+        </li>
+        <li>
+            <a href="#">Settings</a>
+        </li><li>
+            <a href="#">Logout</a>
+        </li>
+        <ul>
+</nav>
+<!-- End Navigation Bar -->
 </body>
 </html>

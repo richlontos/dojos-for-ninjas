@@ -18,38 +18,35 @@
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <title>Dojos For Ninjas!</title>
 </head>
 <body>
-<div class="container">
-    <h1  class="align-content-center">New Book</h1>
-    <div class="row">
-        <div class="col">
-            <div class="form-group">
-                <form:form action="/books/${book.id}" method="put" modelAttribute="book">
-                    <input type="hidden" name="_method" value="put">
-                    <form:input type="hidden" name="user" path="user"></form:input>
-                    <div class="form-group">
-                        <form:label path="title">title</form:label>
-                        <form:input  class="form-control" path="title"/>
-                        <form:errors path="title"/>
-                    </div>
-                    <div>
-                        <form:label path="author">author</form:label>
-                        <form:input  class="form-control" path="author"/>
-                        <form:errors path="author"/>
-                    </div>
-                    <div>
-                        <form:label path="myThoughts">myThoughts</form:label>
-                        <form:input type="textarea"  class="form-control" path="myThoughts"/>
-                        <form:errors path="myThoughts"/>
-                    </div>
-                    <input type="submit" value="edit book">
-                </form:form>
-            </div>
-        </div>
-
-    </div>
-</div>
+<!-- Start Navigation Bar -->
+<nav class="navbar">
+    <ul class="menu">
+        <li>
+            <a href="#">Rentals</a>
+        </li>
+        <li>
+            <a href="#">Postings</a>
+        </li>
+        <li>
+            <a href="#">Find a roommate!</a>
+        </li>
+        <li>
+            <a href="#">Chat Room</a>
+        </li>
+        <li>
+            <a href="#">My profile</a>
+        </li>
+        <li>
+            <a href="#">Settings</a>
+        </li><li>
+        <a href="#">Logout</a>
+    </li>
+        <ul>
+</nav>
+<!-- End Navigation Bar -->
 </body>
 </html>

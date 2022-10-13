@@ -18,23 +18,35 @@
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
-    <title>LoginReg</title>
+    <link rel="stylesheet" href="/css/navbar.css">
+    <title>Dojos For Ninjas!</title>
 </head>
 <body>
-<div class="container">
-    <div>
-    <h1>${book.title}</h1>
-        <a class="float-end" href="/books">back to shelve</a>
-    </div>
-    <p>${book.user.getUserName()} read ${book.title} by ${book.author}</p>
-    <p>${book.myThoughts}</p>
-    <c:if test="${user.getId() == book.user.getId()}">
-    <a href="/books/edit/${book.id}">Edit</a>
-        <form action="/books/destroy/${book.id}" method="post">
-            <input type="hidden" name="_method" value="delete">
-            <input type="submit" value="Delete">
-        </form>
-    </c:if>
-</div>
+<!-- Start Navigation Bar -->
+<nav class="navbar">
+    <ul class="menu">
+        <li>
+            <a href="#">Rentals</a>
+        </li>
+        <li>
+            <a href="#">Postings</a>
+        </li>
+        <li>
+            <a href="#">Find a roommate!</a>
+        </li>
+        <li>
+            <a href="#">Chat Room</a>
+        </li>
+        <li>
+            <a href="#">My profile</a>
+        </li>
+        <li>
+            <a href="#">Settings</a>
+        </li><li>
+        <a href="#">Logout</a>
+    </li>
+        <ul>
+</nav>
+<!-- End Navigation Bar -->
 </body>
 </html>
