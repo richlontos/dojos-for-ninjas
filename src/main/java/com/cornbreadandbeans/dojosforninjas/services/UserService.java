@@ -8,72 +8,49 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 
+import javax.validation.Valid;
 import java.util.Optional;
 
 
 @Service
 public class UserService {
-    @Autowired
-    private final UserRepository userRepo;
+    private final UserRepository userRepository;
 
-    public UserService(UserRepository userRepo) {
-        super();
-        this.userRepo = userRepo;
+    public UserService(UserRepository userRepository) {
+        this.userRepository = userRepository;
     }
 
-    //find one User
-    public User oneUser(Long id) {
-        Optional<User> optUser = userRepo.findById(id);
-        if(optUser.isPresent()) {
-            return optUser.get();
-        }else {
-            return null;
-        }
-    }
-
-    // method to register
     public User register(User newUser, BindingResult result) {
+        // Create optional user
+        // Reject if email is taken (present in database)
+        // Reject if password doesn't match confirmation
+        // Return null if result has errors
+        // hash password
+        // set password
+        // save user to database
+        return null;
 
-        if(userRepo.findByEmail(newUser.getEmail()).isPresent()) {
-            result.rejectValue("email","Unquie","Email already in use");
-        }
-        if(!newUser.getPassword().equals(newUser.getConfirm())){
-            result.rejectValue("confirm","Matches","Passwords do not match");
-        }
-        if(result.hasErrors()) {
-            return null;
-        }else {
-            String hashed = BCrypt.hashpw(newUser.getPassword(), BCrypt.gensalt());
-            newUser.setPassword(hashed);
-
-            return userRepo.save(newUser);
-        }
     }
 
-    // method for login
-    public User login(LoginUser newLogin, BindingResult result) {
-        if(result.hasErrors()) {
-            return null;
-        }
-
-        Optional<User> potentiallUser = userRepo.findByEmail(newLogin.getEmail());
-        if(!potentiallUser.isPresent()) {
-            System.out.println("not present");
-            result.rejectValue("email","notFound","Email not found");
-            return null;
-        }
+    public User login(@Valid LoginUser newLogin, BindingResult result) {
+        // Create potential user
+        // Find user in the DB by email
+        // Reject if NOT present
+        // User exists, retrieve user from DB
+        // Reject if BCrypt password match fails
+        // Return null if result has errors
+        return null;
+        // Otherwise, return the user object
 
 
-        User user = potentiallUser.get();
-        if(!BCrypt.checkpw(newLogin.getPassword(), user.getPassword())) {
-            result.rejectValue("password","Matches","try again");
-        }
+    }
 
-        if(result.hasErrors()) {
-            return null;
-        }else {
-            return user;
+    public Object findById(Long id) {
+        Optional<User> potentialUser = userRepository.findById(id);
+        if(potentialUser.isPresent()) {
+            return potentialUser.get();
         }
+        return null;
     }
 
 
