@@ -60,16 +60,17 @@
     <nav class="untree_co--site-nav js-sticky-nav">
         <div class="container d-flex align-items-center">
             <div class="logo-wrap">
-                <a href="index.html" class="untree_co--site-logo">Dojos For Ninjas</a>
+                <a href="/" class="untree_co--site-logo">Dojos For Ninjas</a>
             </div>
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
                     <li class="active"><a href="">Home</a></li>
-                    <li><a href="">Rentals</a></li>
+                    <li><a href="/rentals">Rentals</a></li>
                     <li><a href="">Postings</a></li>
                     <li><a href="">Find A Roommate!</a></li>
+                    <li><a href="">Contact Us</a></li>
                     <li><a href="/logn">Login</a></li>
-                    <li><a href="/register">Sign Up</a></li>
+                    <li><a href="/regs">Sign Up</a></li>
                 </ul>
             </div>
             <div class="icons-wrap text-md-right">

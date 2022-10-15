@@ -23,42 +23,35 @@
 <body>
 <div class="wrapper">
     <div class="row">
-                <div class="wrapper">
-                    <div class="logo">
-                        <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
-                    </div>
-                    <div class="text-center mt-4 name">
-                        Twitter
-                    </div>
-                <div class="col">
-                    <h2>Register</h2>
-                    <form:form action="/register" method="post" modelAttribute="newUser" class="p-3 mt-3">
-                        <div>
-                            <div class="form-field d-flex align-items-center">
-<%--                                <span class="far fa-user"></span>--%>
-                            <form:label path="userName">userName</form:label>
-                            <form:input  class="form-control" path="userName"/>
-                            <form:errors path="userName"/>
-                            </div>
-                            <div class="form-field d-flex align-items-center">
-                            <form:label path="email">email</form:label>
-                            <form:input  class="form-control" path="email"/>
-                            <form:errors path="email"/>
-                            </div>
-                            <div class="form-field d-flex align-items-center">
-                            <form:label path="password">password</form:label>
-                            <form:input  class="form-control" path="password"/>
-                            <form:errors path="password"/>
-                            </div>
-                            <div class="form-field d-flex align-items-center">
-                            <form:label path="confirm">confirm password</form:label>
-                            <form:input  class="form-control" path="confirm"/>
-                            <form:errors path="confirm"/>
-                            </div>
-                        </div>
-                        <input type="submit" value="register" class="btn mt-3">
-                    </form:form>
+        <div class="col">
+                <div class="logo">
+                    <img src="/images/ninja.jfif" alt="">
                 </div>
+                <div class="text-center mt-4 name">
+                    Dojos For Ninjas
+                </div>
+                <form:form action="/register" method="post" modelAttribute="newUser" class="p-3 mt-3">
+                    <div>
+                        <div class="form-field d-flex align-items-center">
+                            <form:input  placeholder="username" class="form-control" path="userName"/>
+                            <form:errors path="userName"/>
+                        </div>
+                        <div class="form-field d-flex align-items-center">
+                            <form:input placeholder="Email" class="form-control" path="email"/>
+                            <form:errors path="email"/>
+                        </div>
+                        <div class="form-field d-flex align-items-center">
+                            <form:input placeholder="Password" class="form-control" path="password"/>
+                            <form:errors path="password"/>
+                        </div>
+                        <div class="form-field d-flex align-items-center">
+                            <form:input placeholder="confirm password" class="form-control" path="confirm"/>
+                            <form:errors path="confirm"/>
+                        </div>
+                    </div>
+                    <input type="submit" value="register" class="btn mt-3">
+                </form:form>
+            </div>
 
         <%--        <div class="wrapper">--%>
         <%--            <div class="logo">--%>

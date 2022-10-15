@@ -44,6 +44,12 @@ public class OptionController {
         }
     }
 
+    @GetMapping("/rentals")
+    public String rentals(){
+        return "books/show.jsp";
+
+    }
+
     //! READ ALL
     @GetMapping("/books")
     public String allBooks(Model model){

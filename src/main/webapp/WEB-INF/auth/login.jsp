@@ -24,33 +24,36 @@
 <div class="wrapper">
     <div class="row">
 <%--        <div class="col">--%>
-<%--            <h2>Register</h2>--%>
-<%--            <form:form action="/register" method="post" modelAttribute="newUser">--%>
+<%--            <div class="col">--%>
+<%--                <div class="logo">--%>
+<%--                    <img src="/images/ninja.jfif" alt="">--%>
+<%--                </div>--%>
+<%--                <div class="text-center mt-4 name">--%>
+<%--                    Dojos For Ninjas--%>
+<%--                </div>--%>
+<%--            <form:form action="/register" method="post" modelAttribute="newUser" class="p-3 mt-3">--%>
 <%--                <div>--%>
-<%--                    <div class="form-group">--%>
-<%--                    <form:label path="userName">userName</form:label>--%>
-<%--                    <form:input  class="form-control" path="userName"/>--%>
+<%--                    <div class="form-field d-flex align-items-center">--%>
+<%--                    <form:input  placeholder="username" class="form-control" path="userName"/>--%>
 <%--                    <form:errors path="userName"/>--%>
 <%--                    </div>--%>
-<%--                    <div class="form-group">--%>
-<%--                    <form:label path="email">email</form:label>--%>
-<%--                    <form:input  class="form-control" path="email"/>--%>
+<%--                    <div class="form-field d-flex align-items-center">--%>
+<%--                    <form:input placeholder="Email" class="form-control" path="email"/>--%>
 <%--                    <form:errors path="email"/>--%>
 <%--                    </div>--%>
-<%--                    <div>--%>
-<%--                    <form:label path="password">password</form:label>--%>
-<%--                    <form:input  class="form-control" path="password"/>--%>
+<%--                    <div class="form-field d-flex align-items-center">--%>
+<%--                    <form:input placeholder="Password" class="form-control" path="password"/>--%>
 <%--                    <form:errors path="password"/>--%>
 <%--                    </div>--%>
-<%--                    <div>--%>
-<%--                    <form:label path="confirm">confirm password</form:label>--%>
-<%--                    <form:input  class="form-control" path="confirm"/>--%>
+<%--                    <div class="form-field d-flex align-items-center">--%>
+<%--                    <form:input placeholder="confirm password" class="form-control" path="confirm"/>--%>
 <%--                    <form:errors path="confirm"/>--%>
 <%--                    </div>--%>
 <%--                </div>--%>
-<%--                <input type="submit" value="register">--%>
+<%--                <input type="submit" value="register" class="btn mt-3">--%>
 <%--            </form:form>--%>
 <%--        </div>--%>
+<%--            <br>--%>
         <div class="col">
             <div class="logo">
                 <img src="/images/ninja.jfif" alt="">
@@ -58,6 +61,7 @@
             <div class="text-center mt-4 name">
                 Dojos For Ninjas
             </div>
+
             <div class="form-group">
                 <form:form action="/login" method="post" modelAttribute="newLogin" class="p-3 mt-3">
                     <div class="form-field d-flex align-items-center">
@@ -74,7 +78,7 @@
                 <input type="submit" value="login" class="btn mt-3">
                 </form:form>
                 <div class="text-center fs-6">
-                    <a href="#">Forget password?</a> or <a href="/register">Sign up</a>
+                    <a href="#">Forget password?</a> or <a href="/regs">Sign up</a>
                 </div>
             </div>
         </div>

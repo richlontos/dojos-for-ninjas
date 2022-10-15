@@ -37,6 +37,15 @@ public class HomeController {
         return "auth/login.jsp";
     }
 
+    @GetMapping("/regs")
+    public String regs(Model model){
+
+        // Bind empty User and LoginUser objects to capture form input
+        model.addAttribute("newUser", new User());
+        model.addAttribute("newLogin", new LoginUser());
+        return "auth/signUp.jsp";
+    }
+
 
     @PostMapping("/register")
     public String register(@Valid @ModelAttribute("newUser") User newUser, BindingResult result, Model model, HttpSession session){
@@ -45,7 +54,7 @@ public class HomeController {
         System.out.println(user);
         if(result.hasErrors()){
             model.addAttribute("newLogin", new LoginUser());
-            return "auth/sigUp.jsp";
+            return "auth/welcome.jsp";
         }
 
         session.setAttribute("userId", user.getId());
