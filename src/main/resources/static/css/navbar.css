@@ -9,10 +9,12 @@ body {
     background-color: #25283D;
     color: #ffffff;
     border-radius: 4px;
-    width: 100vw;
-    max-width: 820px;
-    margin: 20px auto 0;
+    width: 100%;
+    /*max-width: 820px;*/
+    margin: 0px auto 0;
 }
+
+
 
 .navbar .menu {
     display: flex;

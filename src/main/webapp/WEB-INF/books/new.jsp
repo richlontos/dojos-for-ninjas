@@ -15,7 +15,6 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="/webjars/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/css/navbar.css">
@@ -43,7 +42,7 @@
         <li>
             <a href="#">Settings</a>
         </li><li>
-        <a href="#">Logout</a>
+        <a href="/logout">Logout</a>
     </li>
         <ul>
 </nav>

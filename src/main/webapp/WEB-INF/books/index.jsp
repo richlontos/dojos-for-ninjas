@@ -26,6 +26,9 @@
 <nav class="navbar">
     <ul class="menu">
         <li>
+            <a href="/">Home</a>
+        </li>
+        <li>
             <a href="#">Rentals</a>
         </li>
         <li>
@@ -43,7 +46,7 @@
         <li>
             <a href="#">Settings</a>
         </li><li>
-            <a href="#">Logout</a>
+            <a href="/logout">Logout</a>
         </li>
         <ul>
 </nav>
