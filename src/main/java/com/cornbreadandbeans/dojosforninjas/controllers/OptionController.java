@@ -85,7 +85,7 @@ public class OptionController {
 
 
 //        @GET
-//        @Path("/rentals/location")
+//        @Path("/rentals/{dataset}/Property")
 //        public String locations(){
 //            return  "books/rentals.jsp";
 //        }

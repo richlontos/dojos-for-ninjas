@@ -19,7 +19,7 @@
 
 <%--    //////////          API         //////////--%>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+    <script async defer src="https://api.bridgedataoutput.com/api/v2/OData/test/Property?access_token=6baca547742c6f96a6ff71b138424f21"></script>
 
 
     <%--    //////////          API         //////////--%>
