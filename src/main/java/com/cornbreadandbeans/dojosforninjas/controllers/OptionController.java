@@ -60,6 +60,15 @@ public class OptionController {
     }
     ////////ROOMMATES END//////////
 
+    ////////CONTACT///////////////
+    @GetMapping("/contact")
+    public String contact(){
+        return "books/contact.jsp";
+
+    }
+
+    ////////CONTACT END///////////
+
     ////////POSTINGS START//////////
 
     @GetMapping("/postings")

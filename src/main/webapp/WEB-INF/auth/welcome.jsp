@@ -64,7 +64,6 @@
             </div>
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
-                    <li class="active"><a href="">Home</a></li>
                     <li><a href="/rentals">Rentals</a></li>
                     <li><a href="/postings">Postings</a></li>
                     <li><a href="/roommates">Find A Roommate!</a></li>
@@ -317,7 +316,7 @@
                                 <li><a href="#">Posting</a></li>
                                 <li><a href="#">Chat Room</a></li>
                                 <li><a href="#">About Us</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
                         <div class="col-md-9 ml-auto">
@@ -410,3 +409,4 @@
 <script src="js/main.js"></script>
 </body>
 </html>
+
