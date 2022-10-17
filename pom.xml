@@ -121,6 +121,32 @@
             <artifactId>slf4j-simple</artifactId>
             <version>2.0.3</version>
         </dependency>
+
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.4</version>
+        </dependency>
+        <dependency>
+            <groupId>org.json</groupId>
+            <artifactId>json</artifactId>
+            <version>20140107</version>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.11</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.pholser</groupId>
+            <artifactId>property-binder</artifactId>
+            <version>4.0-beta-1</version>
+        </dependency>
         <!--        <%&#45;&#45;    //////////          API         //////////&#45;&#45;%>-->
 
     </dependencies>
