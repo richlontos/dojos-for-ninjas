@@ -31,7 +31,7 @@
     <nav role="navigation">
         <ul class="menu__items">
             <li><a href="#">News Feed</a></li>
-            <li><a href="#">Messages</a></li>
+            <li><a href="/messenger">Messages</a></li>
             <li><a href="#">Nearby</a></li>
             <li><a href="#">Events</a></li>
             <li><a href="#">Friends</a></li>

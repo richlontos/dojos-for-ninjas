@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="/css/messenger.css">
     <title>Dojos For Ninjas!</title>
 </head>
+<h1>messages will appear here</h1>
 <body ng-app="elastichat">
 <ion-nav-bar class="bar-positive" no-tap-scroll="false">
     <ion-nav-back-button class="button-icon ion-arrow-left-c">

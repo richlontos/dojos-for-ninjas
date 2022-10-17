@@ -69,6 +69,15 @@ public class OptionController {
     }
     ////////POSTINGS END//////////
 
+    ////////MESSENGER START//////////
+
+    @GetMapping("/messenger")
+    public String messenger(){
+        return "books/messenger.jsp";
+
+    }
+    ////////MESSENGER END//////////
+
     ////////PROFILES START//////////
 
     @GetMapping("/myProfile")
