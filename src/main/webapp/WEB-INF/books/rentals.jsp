@@ -16,6 +16,14 @@
     <link rel="stylesheet" href="/css/main.css"> <!-- change to match your file/naming structure -->
     <script src="/webjars/jquery/jquery.min.js"></script>
     <script src="/webjars/bootstrap/js/bootstrap.min.js"></script>
+
+<%--    //////////          API         //////////--%>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+
+
+    <%--    //////////          API         //////////--%>
+
     <title>Dojos For Ninjas!</title>
 </head>
 <body>

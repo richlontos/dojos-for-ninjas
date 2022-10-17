@@ -28,8 +28,8 @@ public class HomeController {
         model.addAttribute("newLogin", new LoginUser());
         return "auth/welcome.jsp";
     }
-    @GetMapping("/logn")
-    public String logn(Model model){
+    @GetMapping("/login")
+    public String login(Model model){
 
         // Bind empty User and LoginUser objects to capture form input
         model.addAttribute("newUser", new User());

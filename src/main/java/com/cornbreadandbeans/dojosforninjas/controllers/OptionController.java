@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import javax.ws.rs.GET;
+import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import java.util.List;
 
 @Controller
@@ -77,6 +80,16 @@ public class OptionController {
 
     }
     ////////POSTINGS END//////////
+
+    ////////API START//////////
+
+
+//        @GET
+//        @Path("/rentals/location")
+//        public String locations(){
+//            return  "books/rentals.jsp";
+//        }
+    ////////API END//////////
 
     ////////MESSENGER START//////////
 
