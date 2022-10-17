@@ -44,11 +44,45 @@ public class OptionController {
         }
     }
 
+    ////////RENTALS START//////////
     @GetMapping("/rentals")
     public String rentals(){
-        return "books/show.jsp";
+        return "books/rentals.jsp";
 
     }
+    ////////RENTALS END//////////
+
+    ////////ROOMMATES//////////
+    @GetMapping("/roommates")
+    public String roommates(){
+        return "books/roommates.jsp";
+
+    }
+    ////////ROOMMATES END//////////
+
+    ////////POSTINGS START//////////
+
+    @GetMapping("/postings")
+    public String postings(){
+        return "books/postings.jsp";
+
+    }
+    ////////POSTINGS END//////////
+
+    ////////PROFILES START//////////
+
+    @GetMapping("/myProfile")
+    public String myProfile(){
+        return "books/myProfile.jsp";
+
+    }
+
+    @GetMapping("/myProfile/edit/{id}")
+    public String editMyProfile(){
+        return "books/editMyProfile.jsp";
+    }
+
+    ////////PROFILES END//////////
 
     //! READ ALL
     @GetMapping("/books")
@@ -58,7 +92,6 @@ public class OptionController {
          return "books/index.jsp";
 
     }
-
     //!READ ONE
 
     @GetMapping("/books/{id}")
@@ -78,13 +111,13 @@ public class OptionController {
     public String editBook(@PathVariable("id")Long id, Model model){
         Book book = optionService.getOne(id);
         model.addAttribute("book", book);
-        return "books/edit.jsp";
+        return "editMyProfile.jsp";
     }
 
     @PutMapping("/books/{id}")
     public String updateBook(@Valid @ModelAttribute("book")Book book, BindingResult result){
         if(result.hasErrors()){
-            return "books/edit.jsp";
+            return "editMyProfile.jsp";
         } else {
             optionService.update(book);
             return "redirect:/books";

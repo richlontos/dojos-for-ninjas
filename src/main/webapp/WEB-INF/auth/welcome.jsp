@@ -66,8 +66,9 @@
                 <ul class="site-nav-ul js-clone-nav">
                     <li class="active"><a href="">Home</a></li>
                     <li><a href="/rentals">Rentals</a></li>
-                    <li><a href="">Postings</a></li>
-                    <li><a href="">Find A Roommate!</a></li>
+                    <li><a href="/postings">Postings</a></li>
+                    <li><a href="/roommates">Find A Roommate!</a></li>
+                    <li><a href="/myProfile">Profile</a></li>
                     <li><a href="">Contact Us</a></li>
                     <li><a href="/logn">Login</a></li>
                     <li><a href="/regs">Sign Up</a></li>
