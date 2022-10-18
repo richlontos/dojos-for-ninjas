@@ -31,17 +31,10 @@ public class User {
     private String confirm;
 
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
-    private List<Book> books;
+    private List<RentalForm> rentalForms;
 
     public User(){}
 
-//    public User(String userName, String email, String password, String confirm, List<Book> books) {
-//        this.userName = userName;
-//        this.email = email;
-//        this.password = password;
-//        this.confirm = confirm;
-//        this.books = books;
-//    }
 
     public Long getId() {
         return id;
