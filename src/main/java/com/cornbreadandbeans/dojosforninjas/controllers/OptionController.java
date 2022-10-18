@@ -58,7 +58,7 @@ public class OptionController {
     ////////ROOMMATES//////////
     @GetMapping("/roommates")
     public String roommates(){
-        return "books/roommates.jsp";
+        return "books/chitchat.jsp";
 
     }
     ////////ROOMMATES END//////////
@@ -70,6 +70,7 @@ public class OptionController {
 
     }
 
+
     ////////CONTACT END///////////
 
     ////////POSTINGS START//////////
@@ -79,6 +80,7 @@ public class OptionController {
         return "books/postings.jsp";
 
     }
+
     ////////POSTINGS END//////////
 
     ////////API START//////////

@@ -68,7 +68,7 @@
                     <li><a href="/postings">Postings</a></li>
                     <li><a href="/roommates">Find A Roommate!</a></li>
                     <li><a href="/myProfile">Profile</a></li>
-                    <li><a href="">Contact Us</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
                     <li><a href="/logn">Login</a></li>
                     <li><a href="/regs">Sign Up</a></li>
                 </ul>

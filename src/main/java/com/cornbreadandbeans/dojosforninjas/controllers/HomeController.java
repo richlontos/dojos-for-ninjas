@@ -28,8 +28,8 @@ public class HomeController {
         model.addAttribute("newLogin", new LoginUser());
         return "auth/welcome.jsp";
     }
-    @GetMapping("/login")
-    public String login(Model model){
+    @GetMapping("/logn")
+    public String logn(Model model){
 
         // Bind empty User and LoginUser objects to capture form input
         model.addAttribute("newUser", new User());
@@ -78,7 +78,7 @@ public class HomeController {
         session.setAttribute("userId", user.getId());
         session.setAttribute("user", user);
 
-        return "redirect:/books";
+        return "redirect:/welcome";
     }
 
     @GetMapping("/welcome")
@@ -93,7 +93,7 @@ public class HomeController {
         Long userId = (Long) session.getAttribute("userId");
         model.addAttribute("user", userServ.findById(userId));
 
-        return "auth/show.jsp";
+        return "auth/welcome.jsp";
 
     }
 
