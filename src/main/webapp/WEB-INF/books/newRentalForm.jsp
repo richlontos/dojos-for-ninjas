@@ -30,8 +30,7 @@
                     <form:hidden path="user" value="${rentalForm.setUser(user)}"></form:hidden>
                     <div class="form-group">
                         <form:label path="images">Upload Images</form:label>
-                        <form:input  class="form-control" path="images"/>
-                        <form:errors path="images"/>
+                        <form:input type="file" class="form-control" path="images" />
                     </div>
                     <div class="form-group">
                         <form:label path="address">address</form:label>

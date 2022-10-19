@@ -33,7 +33,7 @@
 <c:forEach var="rentalForm" items="${rentalForms}">
 <div id="zcards">
     <div class="card">
-        <div class="photo" v-bind:style="{'background-image': wrapURL(listing.imgURL)}">
+        <div class="photo" v-bind:style="{'background-image': wrapURL(listing.imgURL)}" src="${rentalForm.images}">
             <div class="time">${rentalForm.createdAt}</div>
             <div class="heart">
                 <svg id="heart" width="40px" height="35px" :class="{ love: isLoved, noLove: notLoved}" @click="isLoved = !isLoved, notLoved = !notLoved">
