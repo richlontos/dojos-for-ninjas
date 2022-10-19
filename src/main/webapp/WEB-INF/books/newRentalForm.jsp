@@ -27,7 +27,7 @@
         <div class="col">
             <div class="form-group">
                 <form:form action="/rentalForms" method="post" modelAttribute="rentalForm">
-                    <form:hidden path="user" value="${rentals.setUser(user)}"></form:hidden>
+                    <form:hidden path="user" value="${rentalForm.setUser(user)}"></form:hidden>
                     <div class="form-group">
                         <form:label path="images">Upload Images</form:label>
                         <form:input  class="form-control" path="images"/>

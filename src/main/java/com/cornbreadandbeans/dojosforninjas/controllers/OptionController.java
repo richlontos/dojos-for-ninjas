@@ -47,7 +47,7 @@ public class OptionController {
     ////////RENTALS START//////////
     @GetMapping("/rentals")
     public String rentals(){
-        return "books/rentals.jsp";
+        return "books/rentalForm.jsp";
 
     }
     ////////RENTALS END//////////
