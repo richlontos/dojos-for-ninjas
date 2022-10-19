@@ -19,6 +19,13 @@
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="vendor/icomoon/style.css">
+    <link rel="stylesheet" href="vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendor/aos.css">
+    <link rel="stylesheet" href="vendor/animate.min.css">
+    <link rel="stylesheet" href="vendor/bootstrap.css">
     <!-- Theme Style -->
     <link rel="stylesheet" href="style.css">
 
