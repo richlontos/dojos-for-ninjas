@@ -14,19 +14,19 @@ Flexbox and floats are used as a fallback so that browsers which don't support g
     font-size: 10px;
 }
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+/**,*/
+/**::before,*/
+/**::after {*/
+/*    box-sizing: border-box;*/
+/*}*/
 
-body {
-    font-family: "Open Sans", Arial, sans-serif;
-    min-height: 100vh;
-    background-color: #fafafa;
-    color: #262626;
-    padding-bottom: 3rem;
-}
+/*body {*/
+/*    font-family: "Open Sans", Arial, sans-serif;*/
+/*    min-height: 100vh;*/
+/*    background-color: #fafafa;*/
+/*    color: #262626;*/
+/*    padding-bottom: 3rem;*/
+/*}*/
 
 img {
     display: block;

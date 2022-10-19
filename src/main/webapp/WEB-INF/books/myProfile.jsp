@@ -14,32 +14,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="Untree.co">
-    <link rel="shortcut icon" href="favicon.png">
+<%--    <link rel="shortcut icon" href="favicon.png">--%>
 
     <meta name="description" content="" />
     <meta name="keywords" content="" />
 
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
+<%--    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">--%>
 
-    <link rel="stylesheet" href="vendor/icomoon/style.css">
-    <link rel="stylesheet" href="vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/aos.css">
-    <link rel="stylesheet" href="vendor/animate.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap.css">
+<%--    <link rel="stylesheet" href="vendor/icomoon/style.css">--%>
+<%--    <link rel="stylesheet" href="vendor/owl.carousel.min.css">--%>
+<%--    <link rel="stylesheet" href="vendor/aos.css">--%>
+<%--    <link rel="stylesheet" href="vendor/animate.min.css">--%>
+<%--    <link rel="stylesheet" href="vendor/bootstrap.css">--%>
+<%--    <link rel="stylesheet" href="css/myProfile.css">--%>
 
-    <!-- Theme Style -->
-    <link rel="stylesheet" href="style.css">
+<%--    <!-- Theme Style -->--%>
+<%--    <link rel="stylesheet" href="style.css">--%>
 
     <title>Dojos For Ninjas</title>
 </head>
 <body>
+<h1></h1>
 
-<div id="untree_co--overlayer"></div>
-<div class="loader">
-    <div class="spinner-border text-primary" role="status">
-        <span class="sr-only">Loading...</span>
-    </div>
-</div>
 
 <nav class="untree_co--site-mobile-menu">
     <div class="close-wrap d-flex">
@@ -89,28 +85,21 @@
                 </ul>
 
                 <!-- Mobile Toggle -->
-                <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">
-                    <span></span>
-                </a>
+<%--                <a href="#" class="d-block d-lg-none burger js-menu-toggle" data-toggle="collapse" data-target="#main-navbar">--%>
+<%--                    <span></span>--%>
+<%--                </a>--%>
             </div>
         </div>
     </nav>
-
-    <head>
-
-        <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
-        <link href='https://fonts.googleapis.com/css?family=Lato:400,300' rel='stylesheet' type='text/css'>
-    </head>
-
+<c:forEach var="user" items="${myProfile}">
     <div class="box">
-        <div id="overlay" style="margin-top: 100px;">
+        <div id="overlay">
             <div class="image">
                 <div class="trick">
 
                 </div>
             </div>
-            <ul class="text">John Doe</ul>
+            <ul class="text">${user.userName}</ul>
             <div class="text1">Java stack</div>
 
 
@@ -176,30 +165,31 @@
                     </div>
                 </div>
             </div>
+            </c:forEach>
     <!-- End of container -->
 
-    <script src="js/vendor/jquery-3.3.1.min.js"></script>
-    <script src="js/vendor/popper.min.js"></script>
-    <script src="js/vendor/bootstrap.min.js"></script>
+<%--    <script src="js/vendor/jquery-3.3.1.min.js"></script>--%>
+<%--    <script src="js/vendor/popper.min.js"></script>--%>
+<%--    <script src="js/vendor/bootstrap.min.js"></script>--%>
 
-    <script src="js/vendor/owl.carousel.min.js"></script>
+<%--    <script src="js/vendor/owl.carousel.min.js"></script>--%>
 
-    <script src="js/vendor/jarallax.min.js"></script>
-    <script src="js/vendor/jarallax-element.min.js"></script>
-    <script sr c="js/vendor/ofi.min.js"></script>
+<%--    <script src="js/vendor/jarallax.min.js"></script>--%>
+<%--    <script src="js/vendor/jarallax-element.min.js"></script>--%>
+<%--    <script src="js/vendor/ofi.min.js"></script>--%>
 
-    <script src="js/vendor/aos.js"></script>
+<%--    <script src="js/vendor/aos.js"></script>--%>
 
-    <script src="js/vendor/jquery.lettering.js"></script>
-    <script src="js/vendor/jquery.sticky.js"></script>
+<%--    <script src="js/vendor/jquery.lettering.js"></script>--%>
+<%--    <script src="js/vendor/jquery.sticky.js"></script>--%>
 
-    <script src="js/vendor/TweenMax.min.js"></script>
-    <script src="js/vendor/ScrollMagic.min.js"></script>
-    <script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
-    <script src="js/vendor/debug.addIndicators.min.js"></script>
+<%--    <script src="js/vendor/TweenMax.min.js"></script>--%>
+<%--    <script src="js/vendor/ScrollMagic.min.js"></script>--%>
+<%--    <script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>--%>
+<%--    <script src="js/vendor/debug.addIndicators.min.js"></script>--%>
 
 
-    <script src="js/main.js"></script>
+<%--    <script src="js/main.js"></script>--%>
 
 </div>
 </body>

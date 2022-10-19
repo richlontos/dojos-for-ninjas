@@ -2,6 +2,8 @@ package com.cornbreadandbeans.dojosforninjas.controllers;
 
 
 import com.cornbreadandbeans.dojosforninjas.models.Book;
+import com.cornbreadandbeans.dojosforninjas.models.LoginUser;
+import com.cornbreadandbeans.dojosforninjas.models.RentalForm;
 import com.cornbreadandbeans.dojosforninjas.models.User;
 import com.cornbreadandbeans.dojosforninjas.services.OptionService;
 import com.cornbreadandbeans.dojosforninjas.services.UserService;
@@ -92,10 +94,13 @@ public class OptionController {
 
     ////////PROFILES START//////////
 
-    @GetMapping("/myProfile")
-    public String myProfile(){
-        return "books/myProfile.jsp";
-
+    @GetMapping("/myProfile/{id}")
+    public String myProfile(HttpSession session, Model model, @PathVariable Long id){
+        User user = userService.findById(id);
+        model.addAttribute("myProfile", user);
+        Long userId = (Long) session.getAttribute("userId");
+        model.addAttribute("user", user);
+        return "books/showRentalForm.jsp";
     }
 
     @GetMapping("/myProfile/edit/{id}")

@@ -67,18 +67,26 @@
                     <li><a href="/rentals">Rentals</a></li>
                     <li><a href="/postings">Postings</a></li>
                     <li><a href="/roommates">Find A Roommate!</a></li>
-                    <li><a href="/myProfile">Profile</a></li>
+                    <li><c:choose>
+                        <c:when test="${user == null}">
+                        <a href="/logn">Profile</a>
+                    </c:when>
+                    <c:otherwise>
+                        <a href="/myProfile/${user.id}">Profile</a>
+                    </c:otherwise>
+                    </c:choose>
+                    </li>
                     <li><a href="/contact">Contact Us</a></li>
                     <li><c:choose>
                         <c:when test="${user == null}">
                             <a href="/logn">Login</a>
+                            <li><a href="/regs">Sign Up</a></li>
                         </c:when>
                         <c:otherwise>
                             <a href="/logout">Logout</a>
                         </c:otherwise>
                     </c:choose>
                     </li>
-                    <li><a href="/regs">Sign Up</a></li>
                 </ul>
             </div>
             <div class="icons-wrap text-md-right">
