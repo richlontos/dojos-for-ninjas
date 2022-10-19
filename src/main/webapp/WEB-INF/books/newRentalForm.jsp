@@ -52,7 +52,7 @@
                     </div>
                     <div>
                         <form:label path="price">Price</form:label>
-                        <form:input  class="form-control" path="price"/>
+                        <form:input type="number" class="form-control" path="price"/>
                         <form:errors path="price"/>
                     </div>
                     <div>
@@ -62,19 +62,21 @@
                     </div>
                     <div>
                         <form:label path="bedrooms">Add bedrooms</form:label>
-                        <form:input  class="form-control" path="bedrooms"/>
+                        <form:input type="number" class="form-control" path="bedrooms"/>
                         <form:errors path="bedrooms"/>
                     </div>
                     <div>
                         <form:label path="bathrooms">Add bathrooms</form:label>
-                        <form:input  class="form-control" path="bathrooms"/>
+                        <form:input type="number" class="form-control" path="bathrooms"/>
                         <form:errors path="bathrooms"/>
                     </div>
                     <div>
                         <form:label path="parking">parking</form:label>
                         <form:select path="parking">
                             <form:option value="On site parking" label="On site parking"/>
-                            <form:option value="garage" label="garage"/>
+                            <form:option value="garage" label="Garage"/>
+                            <form:option value="Both" label="Both"/>
+
                         </form:select>
                     </div>
                     <div>
@@ -84,7 +86,7 @@
                     </div>
                     <div>
                         <form:label path="animals">Animal friendly?</form:label>
-                        <form:input type="textarea"  class="form-control" path="animals"/>
+                        <form:input class="form-control" path="animals"/>
                         <form:errors path="animals"/>
                     </div>
                     <div>

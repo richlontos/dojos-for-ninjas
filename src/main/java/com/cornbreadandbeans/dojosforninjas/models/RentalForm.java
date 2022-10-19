@@ -1,9 +1,12 @@
 package com.cornbreadandbeans.dojosforninjas.models;
 
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
+import java.util.Date;
 
 @Entity
 @Table(name = "rentalForm")
@@ -20,40 +23,56 @@ public class RentalForm {
 
     private String propertyType;
 
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
     private String price;
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
     private String sqft;
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
     private String bedrooms;
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
     private String bathrooms;
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
     private String parking;
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
     private String requirements;
-    @NotNull
-    @Size(min = 3, max = 200, message = "Meaning must be at least 3 characters long and must not exceed 200 characters")
-
     private String animals;
 
     private String utilities;
     private String amenities;
-
+    @Column(updatable = false)
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date createdAt;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Date updatedAt;
     //RELATIONSHIP
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinTable(name="user_id")
     private User user;
+
     /////////////////////////////////!NO ARGUMENT CONSTRUCTORS!////////////////////////////////////////////////////////
     public RentalForm(){}
+    /////////////////////////////////!NO ARGUMENT CONSTRUCTORS END!////////////////////////////////////////////////////////
+
+    @PrePersist
+    protected void onCreate(){
+        this.createdAt = new Date();
+    }
+    @PreUpdate
+    protected void onUpdate(){
+        this.updatedAt = new Date();
+    }
     /////////////////////////////////!GETTERS AND SETTERS!////////////////////////////////////////////////////////
+
+    public Date getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(Date createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public Date getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(Date updatedAt) {
+        this.updatedAt = updatedAt;
+    }
 
     public Long getId() {
         return id;

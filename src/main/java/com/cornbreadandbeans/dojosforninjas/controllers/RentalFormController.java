@@ -41,6 +41,7 @@ public class RentalFormController {
     @GetMapping("/rentalForms")
     public String allRentalForms(Model model, HttpSession session){
        List<RentalForm> rentalForms = rentalFormService.getAll();
+        System.out.println(rentalForms);
         Long id = (Long) session.getAttribute("userId");
         User user = (User) userService.findById(id);
         model.addAttribute("user", user);

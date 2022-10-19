@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+    font-family: 'Lato', sans-serif;
+}
+
+
+
+h3{
+    text-align: center;
+    color: black;
+}
+
+.zcards-container{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.zillow-container{
+    background-color: #f1f1f1;
+    width: 100%;
+    padding: 30px 0px 50px 0px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card{
+    width: 350px;
+    height: 250px;
+    background-color: white;
+    margin: 5vh auto 0 auto;
+    border-top: 1px solid #ebebeb;
+    border-right: 1px solid #ebebeb;
+    border-left: 1px solid #ebebeb;
+    border-bottom: 5px solid #0774E0;
+    box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.photo{
+    width: 100%;
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description{
+    width:100%;
+    height: 90px;
+    margin: 5px;
+    display: grid;
+    grid-template-rows: 1.4fr 1fr 1fr;
+}
+
+.time{
+    grid-area: time;
+    background: rgba(0,0,0,.54);
+    padding: 5px 15px;
+    display: inline-block;
+    color: white;
+    height: 15%;
+}
+
+.price{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.address{
+    font-size: .85em;
+}
+
+.heart{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+svg{
+    align-self: center;
+}
+
+#heart-path {
+    stroke: white;
+    stroke-width: 2px;
+}
+
+.noLove{
+    fill: none;
+}
+
+.love {
+    fill: white !important;
+}
+
