@@ -69,7 +69,15 @@
                     <li><a href="/roommates">Find A Roommate!</a></li>
                     <li><a href="/myProfile">Profile</a></li>
                     <li><a href="/contact">Contact Us</a></li>
-                    <li><a href="/logn">Login</a></li>
+                    <li><c:choose>
+                        <c:when test="${user == null}">
+                            <a href="/logn">Login</a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="/logout">Logout</a>
+                        </c:otherwise>
+                    </c:choose>
+                    </li>
                     <li><a href="/regs">Sign Up</a></li>
                 </ul>
             </div>
