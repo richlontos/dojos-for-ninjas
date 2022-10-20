@@ -38,8 +38,8 @@ public class RentalFormController {
         }
     }
     ///////////////////////////////READ ALL///////////////////////////////
-    @GetMapping("/rentalForms")
-    public String allRentalForms(Model model, HttpSession session){
+    @GetMapping("/showRental")
+    public String showRental(Model model, HttpSession session){
        List<RentalForm> rentalForms = rentalFormService.getAll();
         System.out.println(rentalForms);
         Long id = (Long) session.getAttribute("userId");
