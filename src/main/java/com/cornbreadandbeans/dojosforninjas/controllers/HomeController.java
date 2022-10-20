@@ -62,7 +62,7 @@ public class HomeController {
         System.out.println(session);
 
 
-        return "redirect:/books";
+        return "redirect:/";
     }
 
     @PostMapping("/login")

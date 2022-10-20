@@ -34,7 +34,7 @@ public class RentalFormController {
             return "books/newRentalForm.jsp";
         } else {
             rentalFormService.create(rentalForm);
-            return "redirect:/rentalForms";
+            return "redirect:/";
         }
     }
     ///////////////////////////////READ ALL///////////////////////////////

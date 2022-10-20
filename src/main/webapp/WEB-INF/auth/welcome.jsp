@@ -70,7 +70,7 @@
                     <li><a href="/myProfile">Profile</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                     <c:choose>
-                        <c:when test="${user == null}">
+                        <c:when test="${sessionScope.userId == null}">
                     <li><a href="/logn">Login</a></li>
                     <li><a href="/regs">Sign Up</a></li>
                         </c:when>
