@@ -72,7 +72,7 @@
                     <li><a href="/regs">Sign Up</a></li>
                         </c:when>
                         <c:otherwise>
-                        <li><a href="/myProfile">Profile</a></li>
+                        <li><a href="/myProfile/${user.id}">Profile</a></li>
                         <li><a href="/rentalForms/new">Rentals</a></li>
                         <li><a href="/showRental">Postings</a></li>
                             <li><a href="/logout">Logout</a></li>
