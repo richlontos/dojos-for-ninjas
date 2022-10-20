@@ -49,7 +49,7 @@
                             <form:errors path="confirm"/>
                         </div>
                     </div>
-                    <input type="submit" value="regs" class="btn mt-3">
+                    <input type="submit" value="register" class="btn mt-3">
                 </form:form>
             </div>
 

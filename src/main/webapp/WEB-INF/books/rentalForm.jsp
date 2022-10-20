@@ -19,17 +19,9 @@
     <title>Dojos For Ninjas!</title>
 </head>
 <body>
-<div id="zillow" class="zillow-container">
+
+
     <h3>${user.userName}, here are some rentals for you to explore!</h3>
-
-    <div class="zcards-container">
-
-        <div v-for="listing in listings">
-            <zillow-card-component v-bind:listing="listing"></zillow-card-component>
-        </div>
-
-    </div>
-</div>
 <c:forEach var="rentalForm" items="${rentalForms}">
 <div id="zcards">
     <div class="card">

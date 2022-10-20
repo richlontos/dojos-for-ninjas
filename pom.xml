@@ -211,6 +211,13 @@
             <version>5.3.23</version>
         </dependency>
         <!--        <%&#45;&#45;    //////////          API         //////////&#45;&#45;%>-->
+        <!-- https://mvnrepository.com/artifact/de.larsgrefer.sass/sass-embedded-host -->
+        <dependency>
+            <groupId>de.larsgrefer.sass</groupId>
+            <artifactId>sass-embedded-host</artifactId>
+            <version>1.8.0</version>
+        </dependency>
+
 
     </dependencies>
 
