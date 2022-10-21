@@ -34,7 +34,7 @@ public class RentalFormController {
             return "books/newRentalForm.jsp";
         } else {
             rentalFormService.create(rentalForm);
-            return "redirect:/";
+            return "redirect:/showRental";
         }
     }
     ///////////////////////////////READ ALL///////////////////////////////
@@ -71,10 +71,10 @@ public class RentalFormController {
         User user = userService.findById(userId);
 
         model.addAttribute("user", user);
-        return "books/editRentalForm.jsp";
+        return "books/editRental.jsp";
     }
 
-    @PutMapping("/rentalForms/{id}")
+    @PostMapping("/updateRentalForms/{id}")
     public String updateRentalForm(@Valid @ModelAttribute("rentalForm") RentalForm rentalForm, BindingResult result, @PathVariable("id")Long id){
         if(result.hasErrors()){
             return "books/editRentalForm.jsp";
@@ -84,9 +84,9 @@ public class RentalFormController {
         }
     }
     ///////////////////////////////DELETE///////////////////////////////
-    @DeleteMapping("/rentalForms/destroy/{id}")
+    @DeleteMapping("/destroyRentalForm/destroy/{id}")
     public String destroyRentalForm(@PathVariable("id")Long id){
-        rentalFormService.destroy(rentalFormService.getOne(id));
+        rentalFormService.destroy(id);
         return "redirect:/showRental";
     }
 }

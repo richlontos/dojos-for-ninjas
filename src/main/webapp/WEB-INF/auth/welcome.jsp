@@ -65,16 +65,17 @@
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
                     <li><a href="/roommates">Find A Roommate!</a></li>
+                    <li><a href="/myProfile">Profile</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                     <c:choose>
-                        <c:when test="${user == null}">
+                        <c:when test="${sessionScope.userId == null}">
                     <li><a href="/logn">Login</a></li>
                     <li><a href="/regs">Sign Up</a></li>
                         </c:when>
                         <c:otherwise>
-                        <li><a href="/myProfile/${user.id}">Profile</a></li>
-                        <li><a href="/rentalForms/new">Rentals</a></li>
-                        <li><a href="/showRental">Postings</a></li>
+                    <li><a href="/rentalForms/new">Add A Rentals</a></li>
+                    <li><a href="/showRental">Postings</a></li>
+
                             <li><a href="/logout">Logout</a></li>
                         </c:otherwise>
                     </c:choose>

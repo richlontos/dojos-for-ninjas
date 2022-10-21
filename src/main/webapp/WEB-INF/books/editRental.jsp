@@ -21,17 +21,17 @@
 
     <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,500i,700|Roboto:300,400,500,700&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="vendor/icomoon/style.css">
-    <link rel="stylesheet" href="vendor/owl.carousel.min.css">
-    <link rel="stylesheet" href="vendor/aos.css">
-    <link rel="stylesheet" href="vendor/animate.min.css">
-    <link rel="stylesheet" href="vendor/bootstrap.css">
+    <link rel="stylesheet" href="/vendor/icomoon/style.css">
+    <link rel="stylesheet" href="/vendor/owl.carousel.min.css">
+    <link rel="stylesheet" href="/vendor/aos.css">
+    <link rel="stylesheet" href="/vendor/animate.min.css">
+    <link rel="stylesheet" href="/vendor/bootstrap.css">
     <!-- Theme Style -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
 
     <title>Dojos For Ninjas</title>
 </head>
-<body>
+<body style="background: none">
 
 <div id="untree_co--overlayer"></div>
 <div class="loader">
@@ -65,9 +65,10 @@
             <div class="site-nav-ul-wrap text-center d-none d-lg-block">
                 <ul class="site-nav-ul js-clone-nav">
                     <li class="has-children">
-                    <li><a href="/rentalForms/new">Add A Rental</a></li>
-                    <li><a href="/postings">Postings</a></li>
-                    <li><a href="/showRental">Find A Roommate!</a></li>
+                    <li><a href="/showRental">Postings</a></li>
+                    <li><a href="/roommates">Find A Roommate!</a></li>
+                    <li><a href="/myProfile">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
                 </ul>
             </div>
             <div class="icons-wrap text-md-right">
@@ -98,51 +99,103 @@
     <main class="untree_co--site-main">
 
 
-        <div class="untree_co--site-hero inner-page bg-light" style="background-color: #fff;">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-9">
-                        <div class="site-hero-contents" data-aos="fade-up">
-                            <h1 class="hero-heading">Contact Us</h1>
-                            <div class="sub-text w-75">
-                                <p>Facilities provided may range from a modest-quality mattress in a small room to large suites with bigger.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <div class="untree_co--site-section">
             <div class="container">
 
                 <div class="row">
                     <div class="col-12" data-aos="fade-up">
-                        <h2 class="display-4 mb-5">Fill the form</h2>
+                        <h2 class="display-4 mb-5">Edit Your Rental!</h2>
                     </div>
                     <div class="col-md-6 mb-5 mb-md-0" data-aos="fade-up" data-aos-delay="100">
 
-                        <form action="#">
+                        <form:form action="/updateRentalForms/${rentalForm.id}" method="post" modelAttribute="rentalForm">
+                            <form:hidden path="user" value="${rentalForm.setUser(user)}"></form:hidden>
                             <div class="form-group">
-                                <label for="name">Your Name *</label>
-                                <input type="text" class="form-control" id="name">
+                                <form:label path="images">Upload Images</form:label>
+                                <form:input type="file" class="form-control" path="images" />
                             </div>
                             <div class="form-group">
-                                <label for="email2">Your Email *</label>
-                                <input type="text" class="form-control" id="email2">
+                                <form:label path="address">address</form:label>
+                                <form:input  class="form-control" path="address"/>
+                                <form:errors path="address"/>
                             </div>
                             <div class="form-group">
-                                <label for="subject">Subject</label>
-                                <input type="text" class="form-control" id="subject">
+                                <form:label path="propertyType">Property Type</form:label>
+                                <form:select path="propertyType">
+                                    <form:option value="Apartment" label="Apartment"/>
+                                    <form:option value="Condos" label="Condos"/>
+                                    <form:option value="Land" label="Land"/>
+                                    <form:option value="Multi Family Home" label="Multi Family Home"/>
+                                    <form:option value="Single Family Home" label="Single Family Home"/>
+                                    <form:option value="Townhouse" label="Townhouse"/>
+                                    <form:option value="Trailor" label="Trailor"/>
+                                </form:select>
                             </div>
                             <div class="form-group">
-                                <label for="message">Message *</label>
-                                <textarea name="message" class="form-control" id="message" cols="30" rows="10"></textarea>
+                                <form:label path="price">Price</form:label>
+                                <form:input type="number" class="form-control" path="price"/>
+                                <form:errors path="price"/>
+                            </div>
+                            <div>
+                                <form:label path="sqft">Add sqft</form:label>
+                                <form:input  class="form-control" path="sqft"/>
+                                <form:errors path="sqft"/>
+                            </div>
+                            <div>
+                                <form:label path="bedrooms">Add bedrooms</form:label>
+                                <form:input type="number" class="form-control" path="bedrooms"/>
+                                <form:errors path="bedrooms"/>
+                            </div>
+                            <div>
+                                <form:label path="bathrooms">Add bathrooms</form:label>
+                                <form:input type="number" class="form-control" path="bathrooms"/>
+                                <form:errors path="bathrooms"/>
+                            </div>
+                            <div>
+                                <form:label path="parking">parking</form:label>
+                                <form:select path="parking">
+                                    <form:option value="On site parking" label="On site parking"/>
+                                    <form:option value="garage" label="Garage"/>
+                                    <form:option value="Both" label="Both"/>
+
+                                </form:select>
+                            </div>
+                            <div>
+                                <form:label path="requirements">Add requirements!</form:label>
+                                <form:input type="textarea"  class="form-control" path="requirements"/>
+                                <form:errors path="requirements"/>
+                            </div>
+                            <div>
+                                <form:label path="animals">Animal friendly?</form:label>
+                                <form:input class="form-control" path="animals"/>
+                                <form:errors path="animals"/>
+                            </div>
+                            <div>
+                                <form:label path="utilities">Utilities</form:label>
+                                <form:select path="utilities">
+                                    <form:option value="Central/Air Conditioning" label="Air Conditioning"/>
+                                    <form:option value="heat" label="heat"/>
+                                    <form:option value="Dishwasher" label="Dishwasher"/>
+                                    <form:option value="Refridgerator" label="Refridgerator"/>
+                                    <form:option value="In-Unit Laundrey" label="In-Unit Laundrey"/>
+                                    <form:option value="On-site Laundrey" label="On-site Laundrey"/>
+                                    <form:option value="washer/dryer connections" label="washer/dryer connections"/>
+                                </form:select>
+                            </div>
+                            <div>
+                                <form:label path="amenities">Amenities</form:label>
+                                <form:select path="amenities">
+                                    <form:option value="Pool" label="Pool"/>
+                                    <form:option value="Gym" label="Gym"/>
+                                    <form:option value="Hottub" label="Hottub"/>
+                                    <form:option value="Patio" label="Patio"/>
+                                    <form:option value="Balcony" label="Balcony"/>
+                                </form:select>
                             </div>
                             <div class="form-group">
-                                <input type="submit" value="Send" class="btn btn-black px-5 text-white">
+                                <input type="submit" value="Update" class="btn btn-black px-5 text-white">
                             </div>
-                        </form>
+                        </form:form>
                     </div>
                     <div class="col-md-4 ml-auto"  data-aos="fade-up" data-aos-delay="200">
                         <div class="media-29190">
@@ -281,29 +334,30 @@
     </div>
 </div>
 
-<script src="js/vendor/jquery-3.3.1.min.js"></script>
-<script src="js/vendor/popper.min.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
 
-<script src="js/vendor/owl.carousel.min.js"></script>
+<script src="/js/vendor/jquery-3.3.1.min.js"></script>
+<script src="/js/vendor/popper.min.js"></script>
+<script src="/js/vendor/bootstrap.min.js"></script>
 
-<script src="js/vendor/jarallax.min.js"></script>
-<script src="js/vendor/jarallax-element.min.js"></script>
-<script src="js/vendor/ofi.min.js"></script>
+<script src="/js/vendor/owl.carousel.min.js"></script>
 
-<script src="js/vendor/aos.js"></script>
+<script src="/js/vendor/jarallax.min.js"></script>
+<script src="/js/vendor/jarallax-element.min.js"></script>
+<script src="/js/vendor/ofi.min.js"></script>
 
-<script src="js/vendor/jquery.lettering.js"></script>
-<script src="js/vendor/jquery.sticky.js"></script>
+<script src="/js/vendor/aos.js"></script>
 
-<script src="js/vendor/jquery.fancybox.min.js"></script>
+<script src="/js/vendor/jquery.lettering.js"></script>
+<script src="/js/vendor/jquery.sticky.js"></script>
 
-<script src="js/vendor/TweenMax.min.js"></script>
-<script src="js/vendor/ScrollMagic.min.js"></script>
-<script src="js/vendor/scrollmagic.animation.gsap.min.js"></script>
-<script src="js/vendor/debug.addIndicators.min.js"></script>
+<script src="/js/vendor/jquery.fancybox.min.js"></script>
+
+<script src="/js/vendor/TweenMax.min.js"></script>
+<script src="/js/vendor/ScrollMagic.min.js"></script>
+<script src="/js/vendor/scrollmagic.animation.gsap.min.js"></script>
+<script src="/js/vendor/debug.addIndicators.min.js"></script>
 
 
-<script src="js/main.js"></script>
+<script src="/js/main.js"></script>
 </body>
 </html>

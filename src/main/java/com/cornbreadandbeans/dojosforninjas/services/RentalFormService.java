@@ -10,8 +10,12 @@ import java.util.Optional;
 
 @Service
 public class RentalFormService {
-    @Autowired
+    final
     RentalFormRepository rentalFormRepository;
+
+    public RentalFormService(RentalFormRepository rentalFormRepository) {
+        this.rentalFormRepository = rentalFormRepository;
+    }
 
 
     public void create(RentalForm rentalForm) {
@@ -32,8 +36,8 @@ public class RentalFormService {
         rentalFormRepository.save(rentalForm);
     }
 
-    public void destroy(RentalForm rentalForm) {
-        rentalFormRepository.delete(rentalForm);
+    public void destroy(Long id) {
+        rentalFormRepository.deleteById(id);
     }
 
 

@@ -100,7 +100,7 @@ public class OptionController {
         model.addAttribute("myProfile", user);
         Long userId = (Long) session.getAttribute("userId");
         model.addAttribute("user", user);
-        return "books/myProfile.jsp";
+        return "books/showRentalForm.jsp";
     }
 
     @GetMapping("/myProfile/edit/{id}")
@@ -120,16 +120,16 @@ public class OptionController {
     }
     //!READ ONE
 
-//    @GetMapping("/showRentalFormDetails/{id}")
-//    public String show(HttpSession session, Model model, @PathVariable("id")Long id){
-//        Book book = optionService.getOne(id);
-//        model.addAttribute("book", book);
-//
-//        Long userId = (Long) session.getAttribute("userId");
-//        User user = userService.findById(userId);
-//        model.addAttribute("user", user);
-//        return "books/showRentalForm.jsp";
-//    }
+    @GetMapping("/books/{id}")
+    public String show(HttpSession session, Model model, @PathVariable("id")Long id){
+        Book book = optionService.getOne(id);
+        model.addAttribute("book", book);
+
+        Long userId = (Long) session.getAttribute("userId");
+        User user = userService.findById(userId);
+        model.addAttribute("user", user);
+        return "books/show.jsp";
+    }
 
     //! EDIT
 
