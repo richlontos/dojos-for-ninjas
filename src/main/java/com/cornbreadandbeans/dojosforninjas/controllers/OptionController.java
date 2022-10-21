@@ -100,7 +100,7 @@ public class OptionController {
         model.addAttribute("myProfile", user);
         Long userId = (Long) session.getAttribute("userId");
         model.addAttribute("user", user);
-        return "books/showRentalForm.jsp";
+        return "books/myProfile.jsp";
     }
 
     @GetMapping("/myProfile/edit/{id}")
