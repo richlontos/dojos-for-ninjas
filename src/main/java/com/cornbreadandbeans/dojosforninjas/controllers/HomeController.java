@@ -22,7 +22,6 @@ public class HomeController {
 
     @GetMapping("/")
     public String index(Model model){
-
         // Bind empty User and LoginUser objects to capture form input
         model.addAttribute("newUser", new User());
         model.addAttribute("newLogin", new LoginUser());

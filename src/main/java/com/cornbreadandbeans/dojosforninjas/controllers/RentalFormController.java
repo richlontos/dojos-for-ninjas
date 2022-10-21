@@ -80,13 +80,13 @@ public class RentalFormController {
             return "books/editRentalForm.jsp";
         } else {
             rentalFormService.update(rentalForm);
-            return "redirect:/rentalForms";
+            return "redirect:/showRental";
         }
     }
     ///////////////////////////////DELETE///////////////////////////////
     @DeleteMapping("/rentalForms/destroy/{id}")
     public String destroyRentalForm(@PathVariable("id")Long id){
         rentalFormService.destroy(rentalFormService.getOne(id));
-        return "redirect:/rentalForms";
+        return "redirect:/showRental";
     }
 }

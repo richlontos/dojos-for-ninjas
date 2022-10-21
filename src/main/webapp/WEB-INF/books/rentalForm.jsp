@@ -35,13 +35,8 @@
         </div>
         <div class="description">
             <div class="price">$ ${rentalForm.price}</div>
-            <div class="info">${rentalForm.bedrooms} bds ${rentalForm.bathrooms} ba ${rentalForm.sqft} sqft - For sale by ${rentalForm.user.userName}</div>
+            <div class="info">${rentalForm.bedrooms} bds ${rentalForm.bathrooms} ba ${rentalForm.sqft} sqft - For sale by <a href="/rentalForms/${rentalForm.id}">${rentalForm.user.userName}</a></div>
             <div class="address">${rentalForm.address}</div>
-            <div class="address">Owners Requirements:</divclass>
-            <div class="address">${rentalForm.requirements}</div>
-                <div class="address">Animals allowed: </divclass>
-                    <div class="address">${rentalForm.animals}</div>
-        </div>
     </div>
 </div>
 </c:forEach>
