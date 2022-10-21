@@ -28,6 +28,7 @@
                 <img src="https://images.unsplash.com/photo-1513721032312-6a18a42c8763?w=152&h=152&fit=crop&crop=faces" alt="">
 
             </div>
+
             <div class="profile-user-settings">
 
                 <h1 class="profile-user-name">${user.userName}</h1>
@@ -49,7 +50,7 @@
 
             <div class="profile-bio">
 
-                <p><span class="profile-real-name">Jane Doe</span> Lorem ipsum dolor sit, amet consectetur adipisicing elit 📷✈️🏕️</p>
+                <p><span class="profile-real-name">nothing</p>
 
             </div>
 
@@ -58,7 +59,6 @@
     </div>
 
 </header>
-
 <main>
     <div class="container">
     </div>

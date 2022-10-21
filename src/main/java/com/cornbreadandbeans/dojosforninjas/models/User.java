@@ -30,6 +30,11 @@ public class User {
     @Size(min = 8, max = 128, message = "You know the drill!")
     private String confirm;
 
+    @Transient
+    @NotEmpty(message = "Requirements password is required")
+    @Size(min = 8, max = 128, message = "You know the drill!")
+    private String requirements;
+
     @OneToMany(mappedBy="user", fetch = FetchType.LAZY)
     private List<RentalForm> rentalForms;
 
